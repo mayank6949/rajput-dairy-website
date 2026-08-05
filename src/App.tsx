@@ -29,7 +29,7 @@ export default function App() {
 
   // Sync route with URL hash for deep links and back button support
   useEffect(() => {
-  const path = window.location.pathname.replace('/', '');
+  const path = window.location.pathname.slice(1);
 
   const validRoutes: PageRoute[] = [
     'home',
@@ -107,7 +107,7 @@ export default function App() {
         return <LegalView type="terms" />;
         case 'desi-ghee-varanasi':
           return <DesiGheeVaranasiView onRouteChange={handleRouteChange} />;
-          
+
           case 'paneer-varanasi':
   return <PaneerVaranasiView onRouteChange={handleRouteChange} />;
       default:
