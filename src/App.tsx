@@ -30,6 +30,8 @@ export default function App() {
   // Sync route with URL hash for deep links and back button support
   useEffect(() => {
   const path = window.location.pathname.slice(1);
+  console.log("PATHNAME =", window.location.pathname);
+console.log("PATH =", path);
 
   const validRoutes: PageRoute[] = [
     'home',
