@@ -27,21 +27,14 @@ export function PaneerVaranasiView({
       "@graph": [
         {
           "@type": "Product",
-          "name": "Fresh Paneer",
-          "description":
-            "Fresh hygienically prepared Paneer from Rajput Dairy Varanasi since 1984.",
-          "brand": {
-            "@type": "Brand",
-            "name": "Rajput Dairy",
-          },
-          "category": "Paneer",
-          "offers": {
-            "@type": "Offer",
-            "priceCurrency": "INR",
-            "availability": "https://schema.org/InStock",
-          },
-        },
-        {
+"name": "Fresh Paneer",
+"description":
+  "Fresh hygienically prepared Paneer from Rajput Dairy Varanasi since 1984.",
+"brand": {
+  "@type": "Brand",
+  "name": "Rajput Dairy",
+},
+"category": "Paneer",
           "@type": "FAQPage",
           "mainEntity": [
             {
