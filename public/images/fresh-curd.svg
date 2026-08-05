@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="woodTable" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#543A22"/>
+      <stop offset="50%" stop-color="#3A2513"/>
+      <stop offset="100%" stop-color="#211307"/>
+    </linearGradient>
+    <linearGradient id="steelMetal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="25%" stop-color="#D0D5DD"/>
+      <stop offset="50%" stop-color="#98A2B3"/>
+      <stop offset="75%" stop-color="#E4E7EC"/>
+      <stop offset="100%" stop-color="#667085"/>
+    </linearGradient>
+    <radialGradient id="curdSurface" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#F9F9FB"/>
+      <stop offset="85%" stop-color="#EFEFF4"/>
+      <stop offset="100%" stop-color="#DCDCE5"/>
+    </radialGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="4" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Dark Rustic Wood Surface -->
+  <rect width="1200" height="675" fill="url(#woodTable)"/>
+
+  <!-- Blue-Striped Towel (Left) -->
+  <polygon points="0,150 280,80 400,675 0,675" fill="#EAECEE" filter="url(#shadow)"/>
+  <path d="M40,140 L180,675" stroke="#1F4E79" stroke-width="12" opacity="0.85"/>
+  <path d="M75,130 L215,675" stroke="#1F4E79" stroke-width="6" opacity="0.85"/>
+
+  <!-- Clay Bowl with Salt (Right) -->
+  <g transform="translate(900, 200)" filter="url(#shadow)">
+    <ellipse cx="0" cy="0" rx="70" ry="35" fill="#A0522D" stroke="#703618" stroke-width="3"/>
+    <ellipse cx="0" cy="-5" rx="60" ry="28" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Main Stainless Steel Patila / Vessel with Fresh Curd -->
+  <g transform="translate(560, 410)" filter="url(#shadow)">
+    <!-- Vessel Base Shadow -->
+    <ellipse cx="0" cy="140" rx="230" ry="60" fill="#000" opacity="0.5"/>
+
+    <!-- Stainless Steel Pot Body -->
+    <path d="M-220,-30 C-220,100 -130,160 0,160 C130,160 220,100 220,-30 L220,-50 L-220,-50 Z" fill="url(#steelMetal)"/>
+
+    <!-- Steel Rim Top -->
+    <ellipse cx="0" cy="-50" rx="230" ry="45" fill="url(#steelMetal)"/>
+    <ellipse cx="0" cy="-50" rx="215" ry="40" fill="#29303D"/>
+
+    <!-- Thick Set Creamy White Curd Fill -->
+    <ellipse cx="0" cy="-50" rx="205" ry="36" fill="url(#curdSurface)"/>
+
+    <!-- Smooth Cut / Scoop Waves in Curd -->
+    <path d="M-120,-50 C-60,-70 40,-70 100,-40 C40,-30 -60,-30 -120,-50 Z" fill="#FFFFFF"/>
+    <path d="M-40,-45 C0,-60 60,-60 80,-40 C40,-35 0,-35 -40,-45 Z" fill="#F4F4F8"/>
+
+    <!-- Stainless Steel Spoon Dipping into Curd -->
+    <g transform="translate(30, -110) rotate(15)" filter="url(#shadow)">
+      <path d="M0,0 L15,-160 L30,-160 L10,0 Z" fill="url(#steelMetal)"/>
+      <ellipse cx="5" cy="15" rx="25" ry="35" fill="url(#steelMetal)"/>
+      <ellipse cx="0" cy="10" rx="18" ry="25" fill="#FFFFFF" opacity="0.7"/>
+    </g>
+
+    <!-- Metal Highlights -->
+    <path d="M-210,20 C-210,90 -120,140 0,140" stroke="#FFFFFF" stroke-width="4" fill="none" opacity="0.6"/>
+  </g>
+
+  <!-- Bottom Right Text Overlay "Fresh Curd" -->
+  <text x="1140" y="630" font-family="'Georgia', 'Times New Roman', serif" font-size="52" font-weight="bold" text-anchor="end" fill="#F2F4F7" opacity="0.9">
+    Fresh Curd
+  </text>
+</svg>

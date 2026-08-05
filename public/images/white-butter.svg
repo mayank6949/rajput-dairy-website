@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="woodTable" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#916439"/>
+      <stop offset="50%" stop-color="#724922"/>
+      <stop offset="100%" stop-color="#4B2D0F"/>
+    </linearGradient>
+    <radialGradient id="plateGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#FAF8F2"/>
+      <stop offset="100%" stop-color="#E8E2D1"/>
+    </radialGradient>
+    <radialGradient id="butterGlow" cx="45%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#FAF9F2"/>
+      <stop offset="85%" stop-color="#EFEAD8"/>
+      <stop offset="100%" stop-color="#DDD6BF"/>
+    </radialGradient>
+    <linearGradient id="brassKnife" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082"/>
+      <stop offset="50%" stop-color="#CA8A04"/>
+      <stop offset="100%" stop-color="#854D0E"/>
+    </linearGradient>
+    <linearGradient id="clayGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A25026"/>
+      <stop offset="100%" stop-color="#54230B"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="4" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Room & Window Daylight Background -->
+  <rect width="1200" height="675" fill="#583A1D"/>
+  <polygon points="0,0 520,0 360,675 0,675" fill="#FFFFFF" fill-opacity="0.25"/>
+
+  <!-- Rustic Wooden Table Surface -->
+  <path d="M0,260 L1200,200 L1200,675 L0,675 Z" fill="url(#woodTable)"/>
+  <line x1="0" y1="350" x2="1200" y2="290" stroke="#361E08" stroke-width="3" opacity="0.6"/>
+
+  <!-- Clay Pot Background -->
+  <g transform="translate(380, 120)" filter="url(#shadow)" opacity="0.8">
+    <path d="M0,60 C-35,60 -60,95 -60,140 C-60,190 -20,210 0,210 C20,210 60,190 60,140 C60,95 35,60 0,60 Z" fill="url(#clayGrad)"/>
+    <ellipse cx="0" cy="60" rx="36" ry="10" fill="#54230B"/>
+  </g>
+
+  <!-- Folded Linen Napkin (Right) -->
+  <polygon points="680,480 1200,420 1200,675 580,675" fill="#E2DDD0"/>
+
+  <!-- Light Ceramic Plate -->
+  <g transform="translate(560, 430)" filter="url(#shadow)">
+    <!-- Plate Outer Shadow -->
+    <ellipse cx="0" cy="50" rx="270" ry="110" fill="#000" opacity="0.3"/>
+    <!-- Plate Rim -->
+    <ellipse cx="0" cy="30" rx="260" ry="100" fill="#D9D2C2"/>
+    <ellipse cx="0" cy="25" rx="250" ry="95" fill="url(#plateGrad)"/>
+    <!-- Plate Specks/Patterns -->
+    <g fill="#A89F8C" opacity="0.3">
+      <circle cx="-120" cy="20" r="1.5"/><circle cx="150" cy="10" r="2"/><circle cx="-80" cy="60" r="1"/>
+      <circle cx="80" cy="40" r="1.5"/><circle cx="-180" cy="-10" r="2"/><circle cx="190" cy="30" r="1.2"/>
+    </g>
+
+    <!-- Round Mound of Fresh White Butter (Safed Makhan) -->
+    <g transform="translate(0, -30)">
+      <!-- Base Shadow on Plate -->
+      <ellipse cx="0" cy="60" rx="140" ry="50" fill="#C1B9A5" opacity="0.6"/>
+
+      <!-- Cylinder Body -->
+      <path d="M-130,10 C-130,50 -70,70 0,70 C70,70 130,50 130,10 L130,-40 C130,-70 70,-90 0,-90 C-70,-90 -130,-70 -130,-40 Z" fill="url(#butterGlow)"/>
+
+      <!-- Top Dome / Swirl lines -->
+      <ellipse cx="0" cy="-40" rx="130" ry="50" fill="#FFFFFF"/>
+      <path d="M-90,-40 C-50,-70 50,-70 90,-40 C50,-20 -50,-20 -90,-40 Z" fill="#F7F5EC" stroke="#E5DFC9" stroke-width="2"/>
+      <path d="M-60,-45 C-30,-60 30,-60 60,-45 C30,-30 -30,-30 -60,-45 Z" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Vintage Brass Butter Knife resting on Plate -->
+    <g transform="translate(110, -10) rotate(-25)" filter="url(#shadow)">
+      <!-- Blade -->
+      <path d="M0,0 L180,-10 C210,-10 220,10 180,15 L0,5 Z" fill="url(#brassKnife)"/>
+      <!-- Handle -->
+      <path d="M0,5 L-120,10 C-140,10 -140,-5 -120,-5 L0,0 Z" fill="url(#brassKnife)"/>
+      <circle cx="-110" cy="2" r="3" fill="#FFE082"/>
+    </g>
+  </g>
+
+  <!-- Green Coriander & Cardamom (Foreground) -->
+  <g transform="translate(780, 560) rotate(15)">
+    <path d="M0,0 Q25,-35 55,-15 Q75,-40 95,-15 Q75,15 0,0" fill="#4CAF50"/>
+  </g>
+  <g transform="translate(480, 590)">
+    <ellipse cx="0" cy="0" rx="11" ry="5.5" fill="#8BC34A" stroke="#33691E" stroke-width="1.5" transform="rotate(-15)"/>
+    <ellipse cx="20" cy="8" rx="10" ry="5" fill="#7CB342" stroke="#33691E" stroke-width="1.5" transform="rotate(30)"/>
+  </g>
+
+  <!-- Bottom Right Text Overlay "Fresh White Butter" -->
+  <text x="1140" y="630" font-family="'Georgia', 'Times New Roman', serif" font-size="52" font-weight="bold" text-anchor="end" fill="#20150B" opacity="0.9">
+    Fresh White Butter
+  </text>
+</svg>

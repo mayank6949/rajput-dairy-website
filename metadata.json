@@ -1,0 +1,6 @@
+{
+  "name": "Rajput Dairy",
+  "description": "Serving Varanasi Since 1984. Pure by Nature. Trusted for Generations. Premium dairy products manufacturer, retailer & wholesaler.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

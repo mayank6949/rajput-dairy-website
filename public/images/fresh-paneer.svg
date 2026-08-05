@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="woodTable" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9C7043"/>
+      <stop offset="50%" stop-color="#7B5228"/>
+      <stop offset="100%" stop-color="#543310"/>
+    </linearGradient>
+    <linearGradient id="paneerTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#F7F5F0"/>
+      <stop offset="100%" stop-color="#EAE5DA"/>
+    </linearGradient>
+    <linearGradient id="paneerFront" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F2EDE2"/>
+      <stop offset="100%" stop-color="#DCD4C4"/>
+    </linearGradient>
+    <linearGradient id="paneerSide" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E5DDCB"/>
+      <stop offset="100%" stop-color="#CBBFA9"/>
+    </linearGradient>
+    <linearGradient id="clayGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#AC5B30"/>
+      <stop offset="100%" stop-color="#5C2B10"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="4" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Room & Soft Window Lighting Background -->
+  <rect width="1200" height="675" fill="#5E4023"/>
+  <polygon points="0,0 550,0 380,675 0,675" fill="#FFFFFF" fill-opacity="0.25"/>
+
+  <!-- Rustic Wood Board Table Surface -->
+  <path d="M0,250 L1200,190 L1200,675 L0,675 Z" fill="url(#woodTable)"/>
+  <line x1="0" y1="340" x2="1200" y2="280" stroke="#3D230A" stroke-width="3" opacity="0.6"/>
+  <line x1="0" y1="460" x2="1200" y2="400" stroke="#3D230A" stroke-width="4" opacity="0.7"/>
+
+  <!-- Clay Pot Background -->
+  <g transform="translate(470, 110)" filter="url(#shadow)" opacity="0.85">
+    <path d="M0,60 C-40,60 -70,95 -70,145 C-70,200 -25,220 0,220 C25,220 70,200 70,145 C70,95 40,60 0,60 Z" fill="url(#clayGrad)"/>
+    <ellipse cx="0" cy="60" rx="42" ry="12" fill="#5C2B10"/>
+  </g>
+
+  <!-- Linen Napkin & Garnish (Right) -->
+  <polygon points="620,440 1200,380 1200,675 510,675" fill="#E4DEC8"/>
+  <g transform="translate(740, 520) rotate(-10)">
+    <path d="M0,0 Q30,-40 60,-20 Q80,-50 100,-20 Q80,20 0,0" fill="#4CAF50"/>
+  </g>
+  <g transform="translate(500, 580)">
+    <ellipse cx="0" cy="0" rx="12" ry="6" fill="#8BC34A" stroke="#33691E" stroke-width="1.5" transform="rotate(-15)"/>
+    <ellipse cx="22" cy="8" rx="10" ry="5" fill="#7CB342" stroke="#33691E" stroke-width="1.5" transform="rotate(30)"/>
+  </g>
+
+  <!-- Large Square Fresh Paneer Block (3D Cuboid) -->
+  <g transform="translate(500, 360)" filter="url(#shadow)">
+    <!-- Shadow Base -->
+    <polygon points="-210,120 10,180 230,110 0,50" fill="#000" opacity="0.4"/>
+
+    <!-- Top Face (Perspectival Rhombus) -->
+    <polygon points="0,-120 200,-50 0,30 -200,-40" fill="url(#paneerTop)"/>
+    
+    <!-- Fine Textile Press Lines on Top -->
+    <g stroke="#D1C8B4" stroke-width="1.5" opacity="0.6">
+      <line x1="-160" y1="-54" x2="40" y2="16"/>
+      <line x1="-120" y1="-68" x2="80" y2="2"/>
+      <line x1="-80" y1="-82" x2="120" y2="-12"/>
+      <line x1="-40" y1="-96" x2="160" y2="-26"/>
+      <line x1="0" y1="-110" x2="180" y2="-43"/>
+
+      <line x1="-160" y1="-26" x2="40" y2="-96"/>
+      <line x1="-120" y1="-12" x2="80" y2="-82"/>
+      <line x1="-80" y1="2" x2="120" y2="-68"/>
+      <line x1="-40" y1="16" x2="160" y2="-54"/>
+    </g>
+
+    <!-- Front Left Face -->
+    <polygon points="-200,-40 0,30 0,160 -200,90" fill="url(#paneerFront)"/>
+    
+    <!-- Front Right Face -->
+    <polygon points="0,30 200,-50 200,80 0,160" fill="url(#paneerSide)"/>
+
+    <!-- Subtle texture details / soft cheese pores -->
+    <g fill="#B2A692" opacity="0.3">
+      <circle cx="-100" cy="40" r="2"/>
+      <circle cx="-50" cy="80" r="2.5"/>
+      <circle cx="-140" cy="20" r="1.5"/>
+      <circle cx="80" cy="30" r="2"/>
+      <circle cx="140" cy="0" r="2.5"/>
+      <circle cx="50" cy="90" r="1.8"/>
+    </g>
+  </g>
+
+  <!-- Bottom Right Text Overlay "Paneer" -->
+  <text x="1140" y="630" font-family="'Georgia', 'Times New Roman', serif" font-size="52" font-weight="bold" text-anchor="end" fill="#24180A" opacity="0.9">
+    Paneer
+  </text>
+</svg>

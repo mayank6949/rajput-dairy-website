@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="woodTable" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9E764E"/>
+      <stop offset="50%" stop-color="#7C5935"/>
+      <stop offset="100%" stop-color="#5B3E20"/>
+    </linearGradient>
+    <linearGradient id="windowLight" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.0"/>
+    </linearGradient>
+    <radialGradient id="buffaloGheeGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="45%" stop-color="#F9F6EE"/>
+      <stop offset="80%" stop-color="#EFE8D6"/>
+      <stop offset="100%" stop-color="#DDD3BC"/>
+    </radialGradient>
+    <linearGradient id="goldRim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EEDC9A"/>
+      <stop offset="50%" stop-color="#C59A3F"/>
+      <stop offset="100%" stop-color="#8C6618"/>
+    </linearGradient>
+    <linearGradient id="glassReflection" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.7"/>
+      <stop offset="30%" stop-color="#FFFFFF" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="clayGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A55832"/>
+      <stop offset="100%" stop-color="#592911"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="4" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Room & Soft Window Daylight Background -->
+  <rect width="1200" height="675" fill="#6B4D2F"/>
+  <polygon points="0,0 600,0 400,675 0,675" fill="url(#windowLight)"/>
+
+  <!-- Rustic Wooden Table Planks -->
+  <path d="M0,260 L1200,200 L1200,675 L0,675 Z" fill="url(#woodTable)"/>
+  <line x1="0" y1="350" x2="1200" y2="290" stroke="#422912" stroke-width="3" opacity="0.6"/>
+  <line x1="0" y1="460" x2="1200" y2="400" stroke="#422912" stroke-width="4" opacity="0.7"/>
+
+  <!-- Clay Pot in Background Left -->
+  <g transform="translate(360, 140)" filter="url(#shadow)" opacity="0.85">
+    <path d="M0,60 C-35,60 -60,95 -60,140 C-60,190 -20,210 0,210 C20,210 60,190 60,140 C60,95 35,60 0,60 Z" fill="url(#clayGrad)"/>
+    <ellipse cx="0" cy="60" rx="36" ry="10" fill="#592911" stroke="#A55832" stroke-width="2"/>
+  </g>
+
+  <!-- Linen Cloth Base for Jar -->
+  <g transform="translate(510, 430)" filter="url(#shadow)">
+    <polygon points="-210,0 210,-40 250,180 -250,210" fill="#C2B8A3"/>
+    <path d="M-210,0 L210,-40" stroke="#A89E88" stroke-width="3" stroke-dasharray="5 3"/>
+  </g>
+
+  <!-- Folded Napkin & Coriander (Right) -->
+  <polygon points="700,500 1200,440 1200,675 600,675" fill="#E8E2D5"/>
+  <g transform="translate(750, 560) rotate(10)">
+    <path d="M0,0 Q25,-35 55,-15 Q75,-40 95,-15 Q75,15 0,0" fill="#4CAF50"/>
+  </g>
+  <!-- Cardamom Pods -->
+  <g transform="translate(500, 590)">
+    <ellipse cx="0" cy="0" rx="11" ry="5.5" fill="#8BC34A" stroke="#33691E" stroke-width="1.5" transform="rotate(15)"/>
+    <ellipse cx="20" cy="-8" rx="10" ry="5" fill="#7CB342" stroke="#33691E" stroke-width="1.5" transform="rotate(-40)"/>
+  </g>
+
+  <!-- Main Glass Jar with Creamy Buffalo Ghee -->
+  <g transform="translate(530, 380)" filter="url(#shadow)">
+    <!-- Shadow -->
+    <ellipse cx="0" cy="170" rx="150" ry="30" fill="#000" opacity="0.4"/>
+
+    <!-- Ghee Fill (Smooth Ivory) -->
+    <path d="M-130,-70 L130,-70 C150,-70 155,-40 155,-20 L155,120 C155,155 125,170 0,170 C-125,170 -155,155 -155,120 L-155,-20 C-155,-40 -150,-70 -130,-70 Z" fill="url(#buffaloGheeGlow)"/>
+
+    <!-- Glass Reflection -->
+    <path d="M-130,-70 L130,-70 C150,-70 155,-40 155,-20 L155,120 C155,155 125,170 0,170 C-125,170 -155,155 -155,120 L-155,-20 C-155,-40 -150,-70 -130,-70 Z" fill="url(#glassReflection)" stroke="#FFFFFF" stroke-width="3" opacity="0.8"/>
+
+    <!-- Gold Metallic Rim Lid -->
+    <rect x="-135" y="-90" width="270" height="25" rx="5" fill="url(#goldRim)" stroke="#FFFFFF" stroke-width="2"/>
+    <ellipse cx="0" cy="-90" rx="135" ry="15" fill="url(#goldRim)"/>
+    
+    <!-- Smooth Cream Ghee Surface inside Jar top -->
+    <ellipse cx="0" cy="-65" rx="125" ry="25" fill="#FFFDF7" opacity="0.95"/>
+  </g>
+
+  <!-- Bottom Right Text Overlay "Buffalo Ghee" -->
+  <text x="1140" y="630" font-family="'Georgia', 'Times New Roman', serif" font-size="52" font-weight="bold" text-anchor="end" fill="#22180C" opacity="0.9">
+    Buffalo Ghee
+  </text>
+</svg>
