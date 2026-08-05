@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { PageRoute, Product } from './types';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -20,6 +21,7 @@ import { CareersView } from './views/CareersView';
 import { BlogView } from './views/BlogView';
 import { LegalView } from './views/LegalView';
 import { DesiGheeVaranasiView } from './views/DesiGheeVaranasiView';
+import { PaneerVaranasiView } from './views/PaneerVaranasiView';
 export default function App() {
   const [currentRoute, setCurrentRoute] = useState<PageRoute>('home');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
@@ -27,31 +29,41 @@ export default function App() {
 
   // Sync route with URL hash for deep links and back button support
   useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace('#/', '').replace('#', '');
-      console.log("HASH CHECK:", hash);
-console.log("Current Hash:", hash);
-      const validRoutes: PageRoute[] = [
-  'home', 'about', 'products', 'manufacturing', 'gallery',
-  'reviews', 'faq', 'contact', 'bulk-orders', 'careers',
-  'blog', 'privacy-policy', 'terms', 'desi-ghee-varanasi'
-];
-      if (validRoutes.includes(hash as PageRoute)) {
-        setCurrentRoute(hash as PageRoute);
-      } else if (!hash) {
-        setCurrentRoute('home');
-      }
-    };
+  const path = window.location.pathname.replace('/', '');
 
-    handleHashChange();
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
+  const validRoutes: PageRoute[] = [
+    'home',
+    'about',
+    'products',
+    'manufacturing',
+    'gallery',
+    'reviews',
+    'faq',
+    'contact',
+    'bulk-orders',
+    'careers',
+    'blog',
+    'privacy-policy',
+    'terms',
+    'desi-ghee-varanasi',
+    'paneer-varanasi'
+  ];
 
+  if (validRoutes.includes(path as PageRoute)) {
+    setCurrentRoute(path as PageRoute);
+  } else {
+    setCurrentRoute('home');
+  }
+}, []);
   const handleRouteChange = (route: PageRoute) => {
-    setCurrentRoute(route);
-    window.location.hash = `#/${route === 'home' ? '' : route}`;
-  };
+  setCurrentRoute(route);
+
+  window.history.pushState(
+    {},
+    '',
+    route === 'home' ? '/' : `/${route}`
+  );
+};
 
   const renderCurrentView = () => {
     console.log("CURRENT ROUTE:", currentRoute);
@@ -95,6 +107,9 @@ console.log("Current Hash:", hash);
         return <LegalView type="terms" />;
         case 'desi-ghee-varanasi':
           return <DesiGheeVaranasiView onRouteChange={handleRouteChange} />;
+          
+          case 'paneer-varanasi':
+  return <PaneerVaranasiView onRouteChange={handleRouteChange} />;
       default:
         return (
           <HomeView

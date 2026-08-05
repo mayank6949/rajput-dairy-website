@@ -232,6 +232,16 @@ export const HomeView: React.FC<HomeViewProps> = ({ onRouteChange, onSelectProdu
             <p className="text-gray-600 text-sm sm:text-base">
               Crafted with tradition and prepared with uncompromising quality every single day.
             </p>
+            <p className="text-sm sm:text-base text-gray-700">
+  Looking for authentic{" "}
+  <a
+    href="/desi-ghee-varanasi"
+    className="text-[#F57C00] font-semibold hover:underline"
+  >
+    Pure Desi Ghee in Varanasi
+  </a>
+  ? Explore our traditional Cow Desi Ghee prepared with trusted quality since 1984.
+</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

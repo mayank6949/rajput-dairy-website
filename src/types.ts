@@ -12,7 +12,8 @@ export type PageRoute =
   | 'blog'
   | 'privacy-policy'
   | 'terms'
-  | 'desi-ghee-varanasi';
+  | 'desi-ghee-varanasi'
+  'paneer-varanasi';
 export interface Product {
   id: string;
   name: string;
